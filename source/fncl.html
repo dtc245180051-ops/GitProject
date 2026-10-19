@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bố cục bằng Float</title>
+    <!-- Bước 1: Liên kết file CSS với HTML -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    /* Khung chứa toàn bộ bố cục */
+    .container {
+      width: 100%;
+    }
+
+    /* Cột bên trái: Chiếm 60%, đẩy sang trái (float: left) */
+    .left-column {
+      width: 60%;
+      float: left;
+      background-color: lightblue;
+      padding: 20px;
+      box-sizing: border-box; /* Đảm bảo padding không làm tăng tổng chiều rộng 60% */
+    }
+
+    /* Cột bên phải: Chiếm 38%, đẩy sang phải (float: right) */
+    .right-column {
+      width: 38%;
+      float: right;
+      background-color: lightgreen;
+      padding: 20px;
+      box-sizing: border-box; /* Bổ sung box-sizing để tính toán chuẩn khoảng cách */
+    }
+
+    /* Xử lý float bằng kỹ thuật Clearfix (tránh sụt giảm chiều cao khung container) */
+    .container::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  </style>
+  <body>
+    <!-- Khung chứa 2 cột -->
+    <div class="container">
+      <!-- Cột bên trái (60%) -->
+      <div class="left-column">
+        <h2>Nội dung chính</h2>
+        <p>
+          Cột bên trái chiếm 60% chiều rộng, chứa các bài viết và nội dung trọng
+          tâm của trang web.
+        </p>
+      </div>
+
+      <!-- Cột bên phải (38%) -->
+      <div class="right-column">
+        <h3>Sidebar</h3>
+        <p>
+          Cột bên phải chiếm 38% chiều rộng, chứa thông tin phụ, danh mục hoặc
+          quảng cáo.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
