@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lịch họp công ty</title>
+  </head>
+  <body>
+    <h1>Lịch họp công ty</h1>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Ngày</th>
+          <th>Giờ</th>
+          <th>Nội dung cuộc họp</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Ngày Thứ Hai có 2 cuộc họp: Cột Ngày dùng rowspan="2" -->
+        <tr>
+          <td rowspan="2">Thứ Hai (20/10)</td>
+          <td>08:00 - 09:00</td>
+          <td>Họp giao ban đầu tuần</td>
+        </tr>
+        <tr>
+          <td>10:00 - 11:30</td>
+          <td>Thảo luận dự án mới</td>
+        </tr>
+
+        <!-- Họp kéo dài nhiều giờ: Cột Giờ dùng colspan="2" gộp cả cột Giờ và Nội dung hoặc thể hiện khoảng thời gian -->
+        <tr>
+          <td rowspan="2">Thứ Ba (21/10)</td>
+          <td>14:00 - 15:00</td>
+          <td>Báo cáo doanh thu tháng</td>
+        </tr>
+        <tr>
+          <td>15:30 - 17:00</td>
+          <td>Đào tạo nhân sự mới</td>
+        </tr>
+
+        <!-- Cuộc họp kéo dài cả buổi (Sáng): Gộp cột Giờ và Nội dung thành 1 dòng kéo dài -->
+        <tr>
+          <td>Thứ Tư (22/10)</td>
+          <td colspan="2">
+            08:00 - 12:00: Hội thảo chiến lược kinh doanh năm (Kéo dài cả buổi
+            sáng)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
