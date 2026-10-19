@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Đăng Ký Người Dùng</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .registration-card {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .registration-card h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: #333333;
+        text-align: center;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: bold;
+        color: #555555;
+      }
+
+      .form-group input[type="text"],
+      .form-group input[type="email"],
+      .form-group input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 14px;
+      }
+
+      .form-group input[type="text"]:focus,
+      .form-group input[type="email"]:focus,
+      .form-group input[type="tel"]:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+
+      .radio-group {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        margin-top: 5px;
+      }
+
+      .radio-group label {
+        font-weight: normal;
+        cursor: pointer;
+      }
+
+      .btn-submit {
+        width: 100%;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: background-color 0.2s;
+      }
+
+      .btn-submit:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="registration-card">
+      <h2>Đăng Ký Người Dùng</h2>
+
+      <!-- Khai báo action và method="POST" đúng yêu cầu -->
+      <form
+        action="http://demo.codegym.vn/6/registration_form/register.php"
+        method="POST"
+      >
+        <!-- Trường Họ và tên: name="name" -->
+        <div class="form-group">
+          <label for="name">Họ và tên:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Nhập họ và tên"
+            required
+          />
+        </div>
+
+        <!-- Trường Email: name="email" -->
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Nhập địa chỉ email"
+            required
+          />
+        </div>
+
+        <!-- Trường Số điện thoại: name="phone" -->
+        <div class="form-group">
+          <label for="phone">Số điện thoại:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Nhập số điện thoại"
+            required
+          />
+        </div>
+
+        <!-- Trường Giới tính: name="gender" -->
+        <div class="form-group">
+          <label>Giới tính:</label>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="gender" value="Nam" checked /> Nam
+            </label>
+            <label> <input type="radio" name="gender" value="Nữ" /> Nữ </label>
+            <label>
+              <input type="radio" name="gender" value="Khác" /> Khác
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit">Đăng ký</button>
+      </form>
+    </div>
+  </body>
+</html>
