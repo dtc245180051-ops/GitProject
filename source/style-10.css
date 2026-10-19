@@ -1,0 +1,116 @@
+/* Style cơ bản cho trang */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f6f8;
+  color: #333;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+section {
+  background: #ffffff;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  color: #0056b3;
+  text-align: center;
+}
+
+h2 {
+  color: #2c3e50;
+  font-size: 18px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+/* -------------------------------------------
+ * 2. Thay đổi kiểu đánh dấu danh sách
+ * ------------------------------------------- */
+.list-square {
+  list-style-type: square;
+}
+
+/* -------------------------------------------
+ * 3. Thay đổi kiểu đánh dấu danh sách có thứ tự
+ * ------------------------------------------- */
+.list-roman {
+  list-style-type: upper-roman;
+}
+
+/* -------------------------------------------
+ * 4. Sử dụng hình ảnh làm dấu đánh dấu
+ * ------------------------------------------- */
+.list-image {
+  /* Thay 'icon.png' bằng đường dẫn hình ảnh icon nhỏ của bạn */
+  list-style-image: url("https://cdn-icons-png.flaticon.com/16/5290/5290058.png");
+}
+
+/* -------------------------------------------
+ * 5. Thay đổi vị trí dấu đánh dấu
+ * ------------------------------------------- */
+.pos-outside {
+  list-style-position: outside;
+  background-color: #e9ecef;
+  padding-left: 30px;
+}
+
+.pos-inside {
+  list-style-position: inside;
+  background-color: #e9ecef;
+  padding-left: 15px;
+}
+
+/* -------------------------------------------
+ * 6. Sử dụng thuộc tính rút gọn list-style
+ * Syntax: list-style: [type] [position] [image];
+ * ------------------------------------------- */
+.list-shorthand {
+  list-style: square inside
+    url("https://cdn-icons-png.flaticon.com/16/5290/5290058.png");
+}
+
+/* -------------------------------------------
+ * 7. Tạo kiểu danh sách với màu sắc
+ * ------------------------------------------- */
+.list-styled-color {
+  background-color: #e8f4f8; /* Màu nền cho toàn bộ danh sách */
+  padding: 20px 40px; /* Khoảng cách bên trong danh sách */
+  border-radius: 5px;
+  list-style-type: disc;
+}
+
+.list-styled-color li {
+  color: #1a5276; /* Màu chữ của các mục */
+  margin-bottom: 8px; /* Khoảng cách giữa các mục */
+  font-weight: bold;
+}
+
+/* -------------------------------------------
+ * 8. Bài tập tổng hợp: Lộ trình học lập trình Web
+ * ------------------------------------------- */
+.web-roadmap {
+  /* Thuộc tính rút gọn: Kiểu số La Mã hoa, vị trí bên trong */
+  list-style: upper-roman inside;
+
+  /* Màu nền & Khoảng cách cho danh sách */
+  background-color: #1e293b;
+  padding: 20px 25px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.web-roadmap li {
+  color: #f8fafc; /* Màu chữ sáng tương phản màu nền */
+  background-color: #334155; /* Nền riêng cho từng mục */
+  padding: 10px 15px; /* Đệm bên trong mỗi mục */
+  margin: 8px 0; /* Khoảng cách giữa các mục */
+  border-left: 4px solid #38bdf8; /* Vạch trang trí bên trái */
+  border-radius: 4px;
+  font-size: 16px;
+}
