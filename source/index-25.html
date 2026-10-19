@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bố Cục Trang Web Chuẩn HTML5</title>
+    <!-- Liên kết đến file CSS bên ngoài -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    /* -------------------------------------------
+ * 1. Định dạng Body và Khung chứa chính
+ * ------------------------------------------- */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-wrapper {
+      width: 1000px; /* Độ rộng cố định của trang */
+      margin: 20px auto; /* Căn giữa trang web */
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+      box-sizing: border-box;
+    }
+
+    /* Clearfix xử lý float cho khung chứa */
+    .main-wrapper::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    /* -------------------------------------------
+ * 2. <header>: Logo và Banner
+ * ------------------------------------------- */
+    .site-header {
+      height: 120px;
+      background-color: #2c3e50;
+      color: #ffffff;
+      text-align: center;
+      line-height: 120px;
+      margin-bottom: 5px;
+    }
+
+    .site-header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    /* -------------------------------------------
+ * 3. <nav>: Thanh điều hướng chính
+ * ------------------------------------------- */
+    .main-nav {
+      height: 40px;
+      background-color: #34495e;
+      margin-bottom: 10px;
+    }
+
+    .main-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-nav ul li {
+      float: left;
+    }
+
+    .main-nav ul li a {
+      display: block;
+      padding: 0 20px;
+      line-height: 40px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .main-nav ul li a:hover {
+      background-color: #1abc9c;
+    }
+
+    /* -------------------------------------------
+ * 4. Bố cục 3 cột bằng Float Layout
+ * ------------------------------------------- */
+
+    /* <aside> Trái: Sidebar bên trái */
+    .left-sidebar {
+      width: 200px;
+      min-height: 400px;
+      float: left;
+      background-color: #eef2f5;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    .left-sidebar h3 {
+      margin-top: 0;
+      font-size: 16px;
+      color: #2c3e50;
+      border-bottom: 2px solid #bdc3c7;
+      padding-bottom: 5px;
+    }
+
+    .left-sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .left-sidebar ul li {
+      margin-bottom: 10px;
+    }
+
+    .left-sidebar ul li a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+
+    .left-sidebar ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* <section>: Khu vực nội dung chính ở giữa */
+    .main-content {
+      width: 580px;
+      min-height: 400px;
+      float: left;
+      background-color: #ffffff;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    .main-content h2 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+
+    /* <article>: Đơn vị bài viết riêng lẻ */
+    .news-item {
+      background-color: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      padding: 10px 15px;
+      margin-top: 15px;
+      border-radius: 4px;
+    }
+
+    /* <aside> Phải: Sidebar bên phải */
+    .right-sidebar {
+      width: 220px;
+      min-height: 400px;
+      float: right;
+      background-color: #eef2f5;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    .right-sidebar h3 {
+      margin-top: 0;
+      font-size: 16px;
+      color: #2c3e50;
+      border-bottom: 2px solid #bdc3c7;
+      padding-bottom: 5px;
+    }
+
+    /* -------------------------------------------
+ * 5. <footer>: Chân trang
+ * ------------------------------------------- */
+    .site-footer {
+      clear: both; /* Bỏ float để nằm ở đáy trang */
+      height: 50px;
+      background-color: #2c3e50;
+      color: #ffffff;
+      text-align: center;
+      line-height: 50px;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .site-footer p {
+      margin: 0;
+    }
+  </style>
+  <body>
+    <!-- Khung chứa toàn bộ trang web -->
+    <div class="main-wrapper">
+      <!-- 1. HEADER: Đầu trang chứa Logo và Banner -->
+      <header class="site-header">
+        <h1>LOGO & BANNER TRANG WEB</h1>
+      </header>
+
+      <!-- 2. NAV: Thanh điều hướng / Menu chính -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Students</a></li>
+          <li><a href="#">Course</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- 3. ASIDE (Trái): Sidebar chứa danh mục bên trái -->
+      <aside class="left-sidebar">
+        <h3>Danh Mục Trái</h3>
+        <ul>
+          <li><a href="#">Liên kết 1</a></li>
+          <li><a href="#">Liên kết 2</a></li>
+          <li><a href="#">Liên kết 3</a></li>
+          <li><a href="#">Liên kết 4</a></li>
+        </ul>
+      </aside>
+
+      <!-- 4. SECTION: Khu vực chứa các bài viết / nội dung chính -->
+      <section class="main-content">
+        <h2>Tin Nổi Bật (Hot News)</h2>
+        <p>
+          Đây là khu vực hiển thị các bài viết mới nhất, slide ảnh hoặc thông
+          tin trọng tâm của trang web.
+        </p>
+
+        <!-- ARTICLE: Mỗi bài viết độc lập bên trong section -->
+        <article class="news-item">
+          <h3>Tin tức 1</h3>
+          <p>Nội dung chi tiết của tin tức 1 được trình bày tại đây...</p>
+        </article>
+
+        <article class="news-item">
+          <h3>Tin tức 2</h3>
+          <p>Nội dung chi tiết của tin tức 2 được trình bày tại đây...</p>
+        </article>
+      </section>
+
+      <!-- 5. ASIDE (Phải): Sidebar chứa thông tin bổ sung bên phải -->
+      <aside class="right-sidebar">
+        <h3>Thông Tin Phải</h3>
+        <p><strong>Lịch hoạt động:</strong> Thứ 2 - Thứ 6</p>
+        <p><strong>Bản đồ:</strong> Hà Nội, Việt Nam</p>
+      </aside>
+
+      <!-- 6. FOOTER: Chân trang chứa thông tin bản quyền -->
+      <footer class="site-footer">
+        <p>
+          &copy; Bản quyền thuộc về Trang Web Của Tôi. Tất cả các quyền được bảo
+          lưu.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
