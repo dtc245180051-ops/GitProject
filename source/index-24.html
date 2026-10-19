@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực Hành Dàn Trang Web Bằng Thẻ DIV</title>
+    <!-- Liên kết file CSS bên ngoài -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    /* -------------------------------------------
+ * 1. Định dạng Body và Khung chứa chính (#main)
+ * ------------------------------------------- */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    #main {
+      width: 1000px; /* Cố định độ rộng trang web */
+      margin: 20px auto; /* Căn giữa trang web ra giữa màn hình */
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+      box-sizing: border-box;
+    }
+
+    /* -------------------------------------------
+ * 2. #head: Logo và Banner
+ * ------------------------------------------- */
+    #head {
+      height: 120px;
+      background-color: #2c3e50;
+      color: #ffffff;
+      text-align: center;
+      line-height: 120px;
+      margin-bottom: 5px;
+    }
+
+    #head h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    /* -------------------------------------------
+ * 3. #head-link: Menu liên kết đầu trang
+ * ------------------------------------------- */
+    #head-link {
+      height: 40px;
+      background-color: #34495e;
+      margin-bottom: 10px;
+    }
+
+    #head-link ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #head-link ul li {
+      float: left;
+    }
+
+    #head-link ul li a {
+      display: block;
+      padding: 0 20px;
+      line-height: 40px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #head-link ul li a:hover {
+      background-color: #1abc9c;
+    }
+
+    /* -------------------------------------------
+ * 4, 5, 6. Bố cục 3 cột (Float Layout): #left, #content, #right
+ * ------------------------------------------- */
+
+    /* Cột trái (#left): Rộng 200px, đẩy dạt sang trái */
+    #left {
+      width: 200px;
+      min-height: 400px;
+      float: left;
+      background-color: #eef2f5;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    #left h3 {
+      margin-top: 0;
+      font-size: 16px;
+      color: #2c3e50;
+      border-bottom: 2px solid #bdc3c7;
+      padding-bottom: 5px;
+    }
+
+    #left ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #left ul li {
+      margin-bottom: 10px;
+    }
+
+    #left ul li a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+
+    #left ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Cột giữa (#content): Rộng 580px, dạt sang trái đứng cạnh #left */
+    #content {
+      width: 580px;
+      min-height: 400px;
+      float: left;
+      background-color: #ffffff;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    #content h2 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+
+    .news-box {
+      background-color: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      padding: 10px 15px;
+      margin-top: 15px;
+      border-radius: 4px;
+    }
+
+    /* Cột phải (#right): Rộng 220px, dạt sang phải (hoặc sang trái) */
+    #right {
+      width: 220px;
+      min-height: 400px;
+      float: right;
+      background-color: #eef2f5;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    #right h3 {
+      margin-top: 0;
+      font-size: 16px;
+      color: #2c3e50;
+      border-bottom: 2px solid #bdc3c7;
+      padding-bottom: 5px;
+    }
+
+    /* -------------------------------------------
+ * 7. #footer: Phân vùng cuối trang (sử dụng clear: both)
+ * ------------------------------------------- */
+    #footer {
+      clear: both; /* Xóa hiệu ứng float để chèn xuống đúng đáy trang */
+      height: 50px;
+      background-color: #2c3e50;
+      color: #ffffff;
+      text-align: center;
+      line-height: 50px;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    #footer p {
+      margin: 0;
+    }
+  </style>
+  <body>
+    <!-- 1. #main: Phân vùng chứa toàn bộ nội dung của trang -->
+    <div id="main">
+      <!-- 2. #head: Phân vùng chứa logo và banner -->
+      <div id="head">
+        <h1>LOGO & BANNER TRANG WEB</h1>
+      </div>
+
+      <!-- 3. #head-link: Phân vùng chứa các liên kết đầu trang -->
+      <div id="head-link">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Students</a></li>
+          <li><a href="#">Course</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- 4. #left: Phân vùng chứa các nội dung bên trái -->
+      <div id="left">
+        <h3>Danh Mục Trái</h3>
+        <ul>
+          <li><a href="#">Liên kết 1</a></li>
+          <li><a href="#">Liên kết 2</a></li>
+          <li><a href="#">Liên kết 3</a></li>
+          <li><a href="#">Liên kết 4</a></li>
+        </ul>
+      </div>
+
+      <!-- 5. #content: Phân vùng chứa các nội dung chính của trang -->
+      <div id="content">
+        <h2>Tin Nổi Bật (Hot News)</h2>
+        <p>
+          Đây là khu vực hiển thị các bài viết mới nhất, slide ảnh hoặc thông
+          tin trọng tâm của trang web.
+        </p>
+
+        <div class="news-box">
+          <h3>Tin tức 1</h3>
+          <p>Nội dung chi tiết của tin tức 1 được trình bày tại đây...</p>
+        </div>
+
+        <div class="news-box">
+          <h3>Tin tức 2</h3>
+          <p>Nội dung chi tiết của tin tức 2 được trình bày tại đây...</p>
+        </div>
+      </div>
+
+      <!-- 6. #right: Phân vùng chứa thông tin bên phải (Lịch, biểu đồ,...) -->
+      <div id="right">
+        <h3>Thông Tin Phải</h3>
+        <p><strong>Lịch hoạt động:</strong> Thứ 2 - Thứ 6</p>
+        <p><strong>Bản đồ:</strong> Hà Nội, Việt Nam</p>
+      </div>
+
+      <!-- 7. #footer: Phân vùng chứa thông tin cuối trang -->
+      <div id="footer">
+        <p>
+          &copy; Bản quyền thuộc về Trang Web Của Tôi. Tất cả các quyền được bảo
+          lưu.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
