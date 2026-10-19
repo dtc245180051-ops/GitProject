@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành CSS Table</title>
+    <style>
+      /* 1. Thiết lập toàn bộ chiều rộng bảng và gộp đường viền kép */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+      }
+
+      /* 2. Tạo đường viền và tạo khoảng cách padding cho các ô */
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+
+      th,
+      td {
+        padding: 15px;
+      }
+
+      /* 3. Định dạng hàng tiêu đề (th): Chiều cao, màu nền tối, chữ trắng, căn trái */
+      th {
+        height: 50px;
+        background-color: #333;
+        color: white;
+        text-align: left;
+      }
+
+      /* 4. Định dạng các ô dữ liệu (td): Chiều cao, căn đáy, màu nền xám nhạt, chữ tối */
+      td {
+        height: 80px;
+        vertical-align: bottom;
+        background-color: #f2f2f2;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Danh sách lớp học</h2>
+
+    <table>
+      <tr>
+        <th>Họ tên</th>
+        <th>Tuổi</th>
+        <th>Lớp</th>
+      </tr>
+      <tr>
+        <td>Nguyễn Văn A</td>
+        <td>20</td>
+        <td>Web</td>
+      </tr>
+      <tr>
+        <td>Trần Thị B</td>
+        <td>21</td>
+        <td>Web</td>
+      </tr>
+    </table>
+  </body>
+</html>
