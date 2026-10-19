@@ -1,0 +1,110 @@
+/* 1. Thiết lập cơ bản */
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  min-height: 1500px; /* Đảm bảo đủ
+chiều cao để cuộn kiểm tra Fixed Header */
+  padding-top: 70px; /* Đẩy nội dung
+xuống để không bị Header cố định che mất */
+  box-sizing: border-box;
+} /* 2. Định
+dạng Header cố định (Fixed Header) */
+.main-header {
+  position: fixed; /* Đặt vị
+trí cố định theo viewport */
+  top: 0; /* Gắn sát mép trên */
+  left: 0; /* Gắn sát
+mép trái */
+  width: 100%; /* Phủ toàn bộ chiều rộng màn hình */
+  background-color: #333333;
+  color: #ffffff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Căn chỉnh các phần tử bên trong bằng Flexbox */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 1000; /* Đảm bảo nằm đè lên trên mọi nội dung khi cuộn */
+}
+.main-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+.main-header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.main-header nav ul li {
+  margin-left: 20px;
+}
+.main-header nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+.main-header nav ul li a:hover {
+  color: #00bcd4;
+} /* 3. Bố cục 3 cột cho Container (Flexbox)
+*/
+.page-container {
+  display: flex; /* Kích hoạt Flexbox */
+  justify-content: space-between;
+  margin: 20px;
+  gap: 20px; /* Khoảng cách giữa các cột */
+} /* Kiểu
+dáng chung cho Sidebars */
+.sidebar {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0; /*
+Giữ nguyên chiều rộng, không bị nén lại */
+  box-sizing: border-box;
+}
+.left-sidebar {
+  width: 200px; /* Chiều rộng cố định cho Sidebar trái */
+}
+.right-sidebar {
+  width: 200px; /* Chiều rộng cố định cho Sidebar phải */
+} /*
+Kiểu dáng cho phần Nội dung chính */
+.main-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex-grow: 1; /* Mở rộng chiếm trọn không gian còn lại ở giữa */
+  box-sizing: border-box;
+}
+.main-content h2 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+.main-content p {
+  line-height: 1.6;
+  color: #444444;
+} /* Trang trí các mục bên trong Sidebar
+*/
+.sidebar h3 {
+  margin-top: 0;
+  color: #333333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar ul li {
+  margin-bottom: 10px;
+  color: #555555;
+}
