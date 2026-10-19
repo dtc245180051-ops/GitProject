@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trình đơn Dropdown dọc</title>
+    <style>
+      /* 1. Reset CSS cơ bản và đặt font chữ */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* 2. Cấu hình cho các phần tử danh sách (li) */
+      #menu li {
+        list-style: none; /* Bỏ ký hiệu đánh dấu đầu danh sách */
+        position: relative; /* Đặt vị trí tương đối làm mốc cho menu con */
+        width: 120px; /* Chiều rộng khung menu */
+        height: 30px; /* Chiều cao mỗi item */
+        padding: 0 20px; /* Padding trái/phải 20px */
+        background-color: black; /* Màu nền đen */
+        line-height: 30px; /* Căn giữa chữ theo chiều dọc */
+        cursor: pointer; /* Đổi con trỏ thành hình bàn tay */
+        border-bottom: 1px solid #333; /* Đường kẻ phân cách giữa các item */
+      }
+
+      /* 3. Định dạng cho thẻ liên kết (a) bên trong menu */
+      #menu a {
+        text-decoration: none; /* Bỏ gạch chân liên kết */
+        color: white; /* Màu chữ trắng */
+        display: block; /* Phủ kín vùng hiển thị */
+      }
+
+      /* 4. Hiệu ứng khi di chuột qua các mục chọn (hover) */
+      #menu li:hover {
+        background-color: #444444; /* Đổi màu nền sang xám khi rê chuột */
+      }
+
+      /* 5. Cấu hình cho danh sách con (ul bên trong li) */
+      #menu li ul {
+        position: absolute; /* Cố định vị trí menu con theo menu cha */
+        top: 0; /* Góc trên bằng với menu cha */
+        left: 160px; /* Đẩy sang phải (120px width + 40px padding trái/phải) */
+        visibility: hidden; /* Ẩn danh sách con đi */
+      }
+
+      /* 6. Hiển thị menu con tương ứng khi di chuột qua menu cha */
+      #menu li:hover > ul {
+        visibility: visible; /* Hiện danh sách con */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Vùng div #menu chứa danh sách lồng nhau -->
+    <div id="menu">
+      <ul>
+        <li>
+          <a href="#">Trang chủ</a>
+        </li>
+        <li>
+          <a href="#">Sản phẩm</a>
+          <!-- Menu con cấp 1 -->
+          <ul>
+            <li><a href="#">Laptop</a></li>
+            <li>
+              <a href="#">Điện thoại</a>
+              <!-- Menu con cấp 2 -->
+              <ul>
+                <li><a href="#">iPhone</a></li>
+                <li><a href="#">Samsung</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Phụ kiện</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Dịch vụ</a>
+          <!-- Menu con cấp 1 -->
+          <ul>
+            <li><a href="#">Bảo hành</a></li>
+            <li><a href="#">Sửa chữa</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Liên hệ</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
