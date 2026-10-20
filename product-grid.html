@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lưới Sản Phẩm Đáp Ứng - Flexbox Grid</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    /* --- 1. Universal Reset & Base Styles --- */
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* --- 2. Flexbox Product Grid Layout --- */
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap; /* Cho phép sản phẩm tự động rớt dòng */
+      gap: 20px; /* Khoảng cách đều 20px giữa các card */
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto; /* Căn giữa toàn bộ lưới sản phẩm */
+    }
+
+    /* --- 3. Product Card Styles --- */
+    .product-card {
+      /* Công thức tính toán kích thước linh hoạt chuẩn xác */
+      flex: 1 1 calc(25% - 20px);
+      min-width: 220px; /* Giới hạn độ rộng tối thiểu trước khi rớt dòng */
+
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-card h4 {
+      margin: 0 0 10px 0;
+      color: #0f172a;
+      font-size: 1.1rem;
+    }
+
+    .product-card .price {
+      color: #e11d48;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin: 0 0 15px 0;
+    }
+
+    .btn-buy {
+      background-color: #2563eb;
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-buy:hover {
+      background-color: #1d4ed8;
+    }
+  </style>
+  <body>
+    <h1 style="text-align: center; margin-top: 30px; color: #1e293b">
+      Danh Sách Sản Phẩm Nổi Bật
+    </h1>
+
+    <!-- Lưới chứa các sản phẩm -->
+    <div class="product-grid">
+      <div class="product-card">
+        <h4>Sản phẩm 1</h4>
+        <p class="price">500.000 đ</p>
+        <button class="btn-buy">Mua ngay</button>
+      </div>
+
+      <div class="product-card">
+        <h4>Sản phẩm 2</h4>
+        <p class="price">750.000 đ</p>
+        <button class="btn-buy">Mua ngay</button>
+      </div>
+
+      <div class="product-card">
+        <h4>Sản phẩm 3</h4>
+        <p class="price">1.200.000 đ</p>
+        <button class="btn-buy">Mua ngay</button>
+      </div>
+
+      <div class="product-card">
+        <h4>Sản phẩm 4</h4>
+        <p class="price">320.000 đ</p>
+        <button class="btn-buy">Mua ngay</button>
+      </div>
+    </div>
+  </body>
+</html>
