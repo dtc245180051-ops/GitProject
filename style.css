@@ -1,0 +1,23 @@
+/* Tùy chỉnh CSS tối giản cho bố cục */
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+/* Đảm bảo khung nội dung chính có khoảng cách đồng đều */
+main {
+  min-height: 60vh;
+}
+
+/* Tùy chỉnh hiệu ứng hover nhẹ cho các card */
+.card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
