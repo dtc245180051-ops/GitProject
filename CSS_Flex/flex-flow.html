@@ -1,0 +1,49 @@
+Một số giá trị của thuộc tính flex-flow: 1. row nowrap (Giá trị mặc định) Sắp
+xếp các item nằm trên cùng 1 hàng theo hướng đọc văn bản (trái qua phải) và
+không co giãn/xuống dòng khi hết khoảng trống. Ví dụ: HTML
+
+<style>
+  .container-1 {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #f1f1f1;
+  }
+  .container-1 > div {
+    background-color: #007bff;
+    color: white;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 50px;
+  }
+</style>
+
+<div class="container-1">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+2. row-reverse nowrap Sắp xếp các item nằm trên cùng 1 hàng nhưng theo hướng
+ngược lại với hướng đọc văn bản (phải qua trái) và không xuống dòng. Ví dụ: HTML
+
+<style>
+  .container-2 {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    background-color: #f1f1f1;
+  }
+  .container-2 > div {
+    background-color: #28a745;
+    color: white;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 50px;
+  }
+</style>
+
+<div class="container-2">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
