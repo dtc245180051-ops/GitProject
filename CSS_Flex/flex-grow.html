@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minh Hoạ Thuộc Tính flex-grow</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 30px;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+
+      h2 {
+        color: #2c3e50;
+        margin-top: 30px;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 8px;
+      }
+
+      /* Khung chứa các ví dụ */
+      .demo-box {
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        padding: 15px;
+        border-radius: 6px;
+        margin-top: 10px;
+      }
+
+      .container {
+        display: flex;
+        gap: 10px;
+        background-color: #2c3e50;
+        padding: 10px;
+        border-radius: 6px;
+      }
+
+      .container > div {
+        padding: 20px 10px;
+        color: #ffffff;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: #3498db;
+      }
+
+      /* -------------------------------------------
+         * 1. Ví dụ chính: Div thứ 2 áp dụng flex-grow: 3
+         * ------------------------------------------- */
+      .example-main > div:nth-child(2) {
+        flex-grow: 3;
+        background-color: #e74c3c; /* Nổi bật div thứ 2 */
+      }
+
+      /* Các div còn lại giữ flex-grow: 1 */
+      .example-main > div:not(:nth-child(2)) {
+        flex-grow: 1;
+      }
+
+      /* -------------------------------------------
+         * 2. Giá trị initial (Trở về mặc định = 0)
+         * ------------------------------------------- */
+      .example-initial > div {
+        flex-grow: 1;
+      }
+
+      .example-initial > div:nth-child(2) {
+        flex-grow: initial; /* Tương đương flex-grow: 0 (không tăng kích thước) */
+        background-color: #f39c12;
+      }
+
+      /* -------------------------------------------
+         * 3. Giá trị inherit (Kế thừa từ phần tử mẹ)
+         * ------------------------------------------- */
+      .parent-grow {
+        flex-grow: 2;
+      }
+
+      .example-inherit > div {
+        flex-grow: 1;
+      }
+
+      .example-inherit > div.inherit-item {
+        flex-grow: inherit; /* Kế thừa giá trị flex-grow: 2 từ lớp .parent-grow */
+        background-color: #2ecc71;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Minh Hoạ Thuộc Tính <code>flex-grow</code></h1>
+
+    <!-- 1. Ví dụ chính theo mô tả bài học -->
+    <h2>
+      1. Áp dụng <code>flex-grow</code> lên Div thứ 2 (Phát triển lớn hơn 4 Div
+      còn lại)
+    </h2>
+    <div class="demo-box">
+      <div class="container example-main">
+        <div>Div 1 (grow: 1)</div>
+        <div>Div 2 (grow: 3)</div>
+        <div>Div 3 (grow: 1)</div>
+        <div>Div 4 (grow: 1)</div>
+        <div>Div 5 (grow: 1)</div>
+      </div>
+    </div>
+
+    <!-- 2. Ví dụ với initial -->
+    <h2>2. Giá trị <code>initial</code> (Đặt về giá trị mặc định = 0)</h2>
+    <div class="demo-box">
+      <div class="container example-initial">
+        <div>Div 1 (grow: 1)</div>
+        <div>Div 2 (initial)</div>
+        <div>Div 3 (grow: 1)</div>
+        <div>Div 4 (grow: 1)</div>
+        <div>Div 5 (grow: 1)</div>
+      </div>
+    </div>
+
+    <!-- 3. Ví dụ với inherit -->
+    <h2>3. Giá trị <code>inherit</code> (Kế thừa thuộc tính từ cha)</h2>
+    <div class="demo-box parent-grow">
+      <div class="container example-inherit">
+        <div>Div 1 (grow: 1)</div>
+        <div class="inherit-item">Div 2 (inherit)</div>
+        <div>Div 3 (grow: 1)</div>
+        <div>Div 4 (grow: 1)</div>
+        <div>Div 5 (grow: 1)</div>
+      </div>
+    </div>
+  </body>
+</html>
