@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minh Hoạ Thuộc Tính flex-wrap</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 30px;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+
+      h2 {
+        color: #2c3e50;
+        margin-top: 30px;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 8px;
+      }
+
+      /* Khung chung bao bọc các ví dụ */
+      .demo-box {
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        padding: 15px;
+        border-radius: 6px;
+        margin-top: 10px;
+      }
+
+      /* Style định dạng thẻ con */
+      .box-item {
+        color: #ffffff;
+        font-weight: bold;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      /* 1. Ví dụ wrap */
+      .example-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        width: 500px;
+        gap: 10px;
+      }
+
+      .example-wrap div {
+        width: 150px;
+        padding: 20px;
+        background-color: #3498db;
+        text-align: center;
+      }
+
+      /* 2. Ví dụ nowrap */
+      .example-nowrap {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 400px;
+        gap: 10px;
+      }
+
+      .example-nowrap div {
+        width: 150px;
+        padding: 20px;
+        background-color: #2ecc71;
+        text-align: center;
+      }
+
+      /* 3. Ví dụ wrap-reverse */
+      .example-wrap-reverse {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        width: 500px;
+        height: 250px;
+        gap: 10px;
+      }
+
+      .example-wrap-reverse div {
+        width: 150px;
+        padding: 20px;
+        background-color: #e74c3c;
+        text-align: center;
+      }
+
+      /* 4. Ví dụ initial */
+      .example-initial {
+        display: flex;
+        width: 400px;
+        flex-wrap: wrap;
+        flex-wrap: initial;
+        gap: 10px;
+      }
+
+      .example-initial div {
+        width: 150px;
+        padding: 20px;
+        background-color: #f39c12;
+        text-align: center;
+      }
+
+      /* 5. Ví dụ tổng hợp */
+      .example-summary {
+        display: flex;
+        flex-wrap: wrap;
+        width: 600px;
+        height: 250px;
+        gap: 10px;
+        border: 2px dashed #333;
+      }
+
+      .example-summary .item {
+        width: 180px;
+        height: 80px;
+        padding: 20px;
+        background-color: #9b59b6;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Minh Hoạ Thuộc Tính <code>flex-wrap</code></h1>
+
+    <!-- Ví dụ 1: wrap -->
+    <h2>1. <code>flex-wrap: wrap;</code> (Tự động xuống dòng)</h2>
+    <div class="demo-box">
+      <div class="example-wrap box-item">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+        <div>Item 5</div>
+        <div>Item 6</div>
+      </div>
+    </div>
+
+    <!-- Ví dụ 2: nowrap -->
+    <h2>2. <code>flex-wrap: nowrap;</code> (Không xuống dòng - Mặc định)</h2>
+    <div class="demo-box">
+      <div class="example-nowrap box-item">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+      </div>
+    </div>
+
+    <!-- Ví dụ 3: wrap-reverse -->
+    <h2>3. <code>flex-wrap: wrap-reverse;</code> (Xuống dòng ngược hướng)</h2>
+    <div class="demo-box">
+      <div class="example-wrap-reverse box-item">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+        <div>Item 5</div>
+        <div>Item 6</div>
+      </div>
+    </div>
+
+    <!-- Ví dụ 4: initial -->
+    <h2>4. <code>flex-wrap: initial;</code> (Trở về mặc định - nowrap)</h2>
+    <div class="demo-box">
+      <div class="example-initial box-item">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+      </div>
+    </div>
+
+    <!-- Ví dụ 5: Ví dụ tổng hợp -->
+    <h2>5. Ví dụ tổng hợp <code>flex-wrap: wrap;</code></h2>
+    <div class="demo-box">
+      <div class="example-summary box-item">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+      </div>
+    </div>
+  </body>
+</html>
