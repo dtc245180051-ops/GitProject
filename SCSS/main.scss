@@ -1,0 +1,11 @@
+// Import các file biến và mixin trước
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// Import cấu trúc nền tảng và layout
+@import "base/global";
+@import "layout/container";
+
+// Import các thành phần giao diện
+@import "components/buttons";
+@import "components/cards";
